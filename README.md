@@ -22,7 +22,7 @@ Example
     <div id="div-3"></div>
 </div>
 
-<script src="/src/full_width.js" type="text/javascript"></script>
+<script src="full_width.js" type="text/javascript"></script>
 <script>
     fullWidthFinal('container', 'div-2'); // fullWidthFinal('container class', 'block id');
 </script>
