@@ -7,7 +7,7 @@ Visually you can look at http://web-bond.com/projects/block-full-width-into-cont
 Initialize
 ------------
 ```html
-<script src="/src/full_width.js" type="text/javascript"></script>
+<script src="full_width.js" type="text/javascript"></script>
 <script>
     fullWidthFinal('container', 'div-2'); // fullWidthFinal('container class', 'block id');
 </script>
