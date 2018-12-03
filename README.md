@@ -1,6 +1,7 @@
 Full width block in container
 ============
-The script on javascript, which allows you to stretch the block in a container for the entire width of the window
+The script on javascript, which allows you to stretch the block in a container for the entire width of the window.
+Visually you can look at http://web-bond.com/projects/block-full-width-into-container/
 
 Initialize
 ------------
