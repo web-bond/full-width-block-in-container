@@ -7,7 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The script on javascript, which allows you to stretch the block in a container for the entire width of the window</title>
     <meta name="description" content="A universal script that calculates the width of the window without scrolling and the width of the container and its indentation. Further, the matter of arithmetic. You just need to replace the container selector and the block selector that needs to be stretched">
-
+    
+    <script src="full_width.js" type="text/javascript"></script>
+    
 </head>
 <body>
 <div style="text-align: center; margin: 20px 0;"><a href="http://web-bond.com" style="color: #000; font-size: 22px;">Go to main page</a></div>
@@ -16,6 +18,10 @@
     <div id="div-2"></div>
     <div id="div-3"></div>
 </div>
+<script>
+    fullWidthFinal('container', 'div-2'); // fullWidthFinal('container class', 'block id');
+</script>
+    
 <style>
     * {
         box-sizing: border-box;
@@ -44,11 +50,6 @@
         background: orange;
     }
 </style>
-
-<script src="full_width.js" type="text/javascript"></script>
-<script>
-    fullWidthFinal('container', 'div-2'); // fullWidthFinal('container class', 'block id');
-</script>
 
 </body>
 </html>
