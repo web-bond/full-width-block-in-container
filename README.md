@@ -50,33 +50,4 @@ Example
     fullWidthFinal('.container', '#div-2'); // fullWidthFinal('container selector', 'block selector');
 </script>
 <!-- end -->
-
-<style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-    .container {
-        width: 100%;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    @media (min-width: 1200px) {
-        .container {
-            width: 1170px;
-            margin: 0 auto;
-        }
-    }
-    .container div {
-        background: red;
-        height: 200px;
-    }
-    #div-2 {
-        background: green;
-    }
-    #div-3 {
-        background: orange;
-    }
-</style>
 ```
