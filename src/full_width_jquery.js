@@ -6,6 +6,9 @@ function fullWidthFinal(selector_container, selector_block) {
         $(window).on('resize', function() {
             fullWidth(selector_container, selector_block);
         });
+        $(document).ready(function() {
+            fullWidth(selector_container, selector_block);
+        });
     }
 }
 function fullWidth(selector_container, selector_block) {
