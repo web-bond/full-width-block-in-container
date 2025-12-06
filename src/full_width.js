@@ -1,30 +1,34 @@
-function fullWidthFinal(class_container, id_block) {
-    var class_container = class_container;
-    var id_block = id_block;
-    fullWidth(class_container, id_block);
-    window.addEventListener('load', function() {
-        fullWidth(class_container, id_block);
+function fullWidthFinal(selector_container, selector_block) {
+    fullWidth(selector_container, selector_block);
+
+    window.addEventListener('resize', function () {
+        fullWidth(selector_container, selector_block);
     });
-    window.addEventListener('resize', function() {
-        fullWidth(class_container, id_block);
+
+    document.addEventListener('DOMContentLoaded', function () {
+        fullWidth(selector_container, selector_block);
     });
 }
 
-function fullWidth(class_container, id_block) {
-    var class_container = class_container;
-    var id_block = id_block;
-    if (document.getElementsByClassName(class_container)[0]) {
-        /* calculate width */
-        var windowWidth = document.documentElement.clientWidth;
-        var container = document.getElementsByClassName(class_container)[0];
-        var containerPadding = parseFloat(window.getComputedStyle(container).paddingLeft)
-            + parseFloat(window.getComputedStyle(container).paddingRight);
-        var containerWidth = container.offsetWidth - containerPadding;
-        var margin = -(windowWidth - containerWidth)/2;
-        /* end calculate width */
-        if (document.getElementById(id_block)) {
-            document.getElementById(id_block).style.marginLeft = margin+'px';
-            document.getElementById(id_block).style.marginRight = margin+'px';
-        }
-    }
+function fullWidth(selector_container, selector_block) {
+    var container = document.querySelector(selector_container);
+    var blocks = document.querySelectorAll(selector_block);
+
+    if (!container || !blocks.length) return;
+
+    var winWidth = document.documentElement.clientWidth || window.innerWidth;
+
+    var style = getComputedStyle(container);
+    var paddingLeft = parseFloat(style.paddingLeft) || 0;
+    var paddingRight = parseFloat(style.paddingRight) || 0;
+
+    var containerClientWidth = container.clientWidth;
+    var contentWidth = containerClientWidth - paddingLeft - paddingRight;
+
+    var margin = -(winWidth - contentWidth) / 2;
+
+    blocks.forEach(function (blk) {
+        blk.style.marginLeft = margin + 'px';
+        blk.style.marginRight = margin + 'px';
+    });
 }
